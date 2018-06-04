@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Put a dope title here</title>
+    <title>Turista</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no" />
-    <link rel="stylesheet" href="./materialize/css/materialize.css">
-    link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <nav style="position:absolute;z-index:1;" class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html" style="font-family:'Permanent Marker', cursive;">Turista</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Find</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="slideshow" style="height:60vh; width:100vw;"></div>
+    <h1 data-animate="fadeInDown" data-duration="1.0s" data-delay="0.5s" class="scrolla" style="font:8vh 'Permanent Marker', cursive;">Turista</h1>
+    <div id="intro" class="container">
+      <hr>
+      <div class="container row">
+        <div class="col scrolla" data-animate="fadeInRight" data-duration="1.5s" data-delay="0.5s">
+          <span class="fa-stack fa-lg fa-5x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-location-arrow fa-stack-1x fa-inverse"></i>
+          </span>
+          <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Justo laoreet sit amet cursus sit amet dictum.</h6>
+        </div>
+        <div class="col scrolla" data-animate="fadeInLeft" data-duration="1.5s" data-delay="0.5s">
+          <span class="fa-stack fa-lg fa-5x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+          </span>
+          <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Justo laoreet sit amet cursus sit amet dictum.</h6>
+        </div>
+      </div>
+    </div>
 
-    
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.backstretch.js"></script>
+    <script type="text/javascript" src="./js/scrolla.js"></script>
     <script type="text/javascript" src="./js/scripts.js"></script>
   </body>
 </html>

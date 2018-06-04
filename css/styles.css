@@ -1,1 +1,8 @@
-
+body{
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+ .bg-light{
+   background:rgba(255,255,255,0.5)!important;
+   width:100vw;
+ }
