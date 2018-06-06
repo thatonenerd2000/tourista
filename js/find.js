@@ -18,10 +18,11 @@ function initMap(){
       info.setContent('You are here :)');
       info.open(map);
       var httpReq = new XMLHttpRequest();;
-      var url = "https://cors.io/?https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+pos.lat+","+pos.lng+"&radius=1500&type=tourist+site&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw";
-      httpReq.open('GET',url,true);
+      var url = "https://cors.io/?https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+pos.lat+","+pos.lng+"&radius=5000&type=tourist+site&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw";
+      httpReq.open('GET',url,false);
       httpReq.send();
-      console.log(httpReq.responseText);
+      var finalobj = JSON.parse(httpReq.responseText);
+      console.log(finalobj.results);
     })
   }
 }
