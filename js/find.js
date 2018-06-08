@@ -1,8 +1,8 @@
 var map;
 var pos;
 var marker;
-var content = document.getElementById("cont")
-var imghttp = new XMLHttpRequest();
+var pic = document.getElementById("pic")
+var service;
 function initMap(){
   map = new google.maps.Map(
     document.getElementById('map'),
@@ -31,16 +31,34 @@ function initMap(){
       httpReq.send();
       var finalobj = JSON.parse(httpReq.responseText);
       console.log(finalobj.results);
-      console.log(finalobj.results[0].photos[0].photo_reference);
 
       for(var i = 0; i < 8; i++){
-        imghttp.open('GET',"https://cors.io/?https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+ finalobj.results[i].photos[0].photo_reference +"&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw",true);
-        imghttp.send();
-        console.log(imghttp);
-        var img = new Image();
-        img.src = imghttp.response;
-        content.append(img);
+        var request = {
+          placeId: (finalobj.results[i].place_id)
+        };
+
+        service = new google.maps.places.PlacesService(map);
+        service.getDetails(request, callback);
+
+        function callback(place, status) {
+          if (status == google.maps.places.PlacesServiceStatus.OK) {
+            console.log(place);
+              var img = new Image();
+              img.src = place.photos[1].getUrl({'maxWidth': 200, 'maxHeight': 200});
+              pic.append(img);
+          }
+        }
       }
+      // console.log(finalobj.results[0].photos[0].photo_reference);
+      //
+      // for(var i = 0; i < 8; i++){
+      //   imghttp.open('GET',"https://cors.io/?https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+ finalobj.results[i].photos[0].photo_reference +"&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw",true);
+      //   imghttp.send();
+      //   console.log(imghttp);
+      //   var img = new Image();
+      //   img.src = imghttp.response;
+      //   content.append(img);
+      // }
     })
   }
 }
