@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="./css/time.css" />
   </head>
   <body>
     <nav style="position:absolute;z-index:1;" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +23,7 @@
             <a class="nav-link" href="find.html">Find</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="time.html">Time</a>
+            <a class="nav-link active" href="time.html">Time</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
@@ -31,26 +31,9 @@
         </ul>
       </div>
     </nav>
-    <div id="slideshow" style="height:60vh; width:100vw;"></div>
-    <h1 data-animate="fadeInDown" data-duration="1.0s" data-delay="0.5s" class="scrolla" style="font:8vh 'Permanent Marker', cursive;">Turista</h1>
-    <div id="intro" class="container">
-      <hr>
-      <div class="container row">
-        <div class="col scrolla" data-animate="fadeInRight" data-duration="1.5s" data-delay="0.5s">
-          <span class="fa-stack fa-lg fa-5x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-location-arrow fa-stack-1x fa-inverse"></i>
-          </span>
-          <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Justo laoreet sit amet cursus sit amet dictum.</h6>
-        </div>
-        <div class="col scrolla" data-animate="fadeInLeft" data-duration="1.5s" data-delay="0.5s">
-          <span class="fa-stack fa-lg fa-5x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
-          </span>
-          <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Justo laoreet sit amet cursus sit amet dictum.</h6>
-        </div>
-      </div>
+
+    <div style="text-align:center;font-size:10vh;padding-top:10vh;" id="all" data-animate="fadeInDown" data-duration="1.0s" data-delay="0.5s" class="scrolla" >
+
     </div>
 
     <script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -58,6 +41,7 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/jquery.backstretch.js"></script>
     <script type="text/javascript" src="./js/scrolla.js"></script>
-    <script type="text/javascript" src="./js/scripts.js"></script>
+    <script type="text/javascript" src="./js/moment.js"></script>
+    <script type="text/javascript" src="./js/time.js"></script>
   </body>
 </html>

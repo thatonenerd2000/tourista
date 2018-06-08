@@ -34,13 +34,12 @@ function initMap(){
       console.log(finalobj.results[0].photos[0].photo_reference);
 
       for(var i = 0; i < 8; i++){
-        imghttp.open('GET',"https://cors.io/?https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+ finalobj.results[i].photos[0].photo_reference +"&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw",false);
+        imghttp.open('GET',"https://cors.io/?https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+ finalobj.results[i].photos[0].photo_reference +"&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw",true);
         imghttp.send();
         console.log(imghttp);
-        var x = document.createElement("IMG");
-        x.setAttribute("src", imghttp.responseText);
-        x.setAttribute("alt", "The Pulpit Rock");
-        content.append(x);
+        var img = new Image();
+        img.src = imghttp.response;
+        content.append(img);
       }
     })
   }
