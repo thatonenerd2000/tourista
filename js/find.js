@@ -26,7 +26,7 @@ function initMap(){
         title:"You are here :)",
       })
       var httpReq = new XMLHttpRequest();
-      var url = "https://cors.io/?https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+pos.lat+","+pos.lng+"&radius=5000&type=tourist+site&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw";
+      var url = "https://cors.io/?https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+pos.lat+","+pos.lng+"&radius=5000&type=places+to+visit+near+me&key=AIzaSyBjltKonYN1BdEJTfJXAxt5mOd-tleO1tw";
       httpReq.open('GET',url,false);
       httpReq.send();
       var finalobj = JSON.parse(httpReq.responseText);
