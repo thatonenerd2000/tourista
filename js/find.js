@@ -44,8 +44,14 @@ function initMap(){
           if (status == google.maps.places.PlacesServiceStatus.OK) {
             console.log(place);
               var img = new Image();
-              img.src = place.photos[1].getUrl({'maxWidth': 200, 'maxHeight': 200});
+              img.src = place.photos[1].getUrl({'maxWidth': 1000, 'maxHeight': 1200});
               pic.append(img);
+              $(document).ready(function(){
+                $(img).hover(function(){
+                  $(this).css("opacity","0.5")
+                },function(){
+                  $(this).css("opacity", "1");})
+              })
           }
         }
       }
