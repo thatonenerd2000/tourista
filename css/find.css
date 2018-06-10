@@ -18,8 +18,13 @@ body{
 }
 
 #pic img{
-  height:20vh;
-  padding:10px;
+  margin:10px;
+  height:25vh;
   cursor: pointer;
-  transition: opacity 0.5s ease-out;
+  text-align: center;
+}
+
+li{
+  text-decoration: none;
+  display: none;
 }
